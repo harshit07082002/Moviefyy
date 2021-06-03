@@ -99,7 +99,7 @@ const printing=(data)=>{
               <p>${data.length}</p>
             </div>
             <div class="card">
-              <p id="imb">IMBD RATING</p>
+              <p id="imb">IMDB RATING</p>
               <div class="rating">
                   <img src="img/star.png" height="40px" alt="star">  
               <p>${data.rating}/10</p>
@@ -115,7 +115,7 @@ const printing=(data)=>{
         </div>
         
         <div class="trailer">
-            <a href="${data.trailer.link}" target="__parent"> <p>Watch Trailer</p> <img src="img/outline_play_arrow_white_24dp.png" alt="play"></a>
+            <a href="${data.trailer.link===""?"#":data.trailer.link}" target="__parent"> <p>Watch Trailer</p> <img src="img/outline_play_arrow_white_24dp.png" alt="play"></a>
         </div>
         </div>
     </div> 
