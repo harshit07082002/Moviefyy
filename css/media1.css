@@ -1,0 +1,36 @@
+@media  screen and (max-width:1072px) and (min-width:0px){
+    body{
+        /* background-color: red; */
+    }
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center ;
+        
+    }
+    .right{
+        margin-right: 0;
+        margin-top: 1rem;
+    }
+}
+@media  screen and (max-width:606px) and (min-width:0px){
+  .left{
+      justify-content: center;
+      align-items: center;
+  }
+  .left ul{
+      margin-top: 1rem;
+  }
+  .right{
+      margin: 0;
+  }
+}
+@media  screen and (max-width:440px) and (min-width:0px){
+    .left ul li{
+        margin: 0 0.8rem;
+        
+    }
+    .right input{
+        width: 10rem;
+    }
+}

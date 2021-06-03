@@ -1,0 +1,29 @@
+{
+  "name": "moviefyy",
+  "version": "1.0.0",
+  "description": "movie search app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode production",
+    "start": "webpack-dev-server --mode production --open",
+    "serve": "webpack serve --config config/webpack.dev.js --progress"
+  },
+  "author": "Harshit Arora",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "bable-loader": "0.0.1-security",
+    "serve": "^11.3.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "axios": "^0.21.1",
+    "babel-loader": "^8.2.2",
+    "babel-polyfill": "^6.26.0"
+  }
+}

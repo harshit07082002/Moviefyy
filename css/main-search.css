@@ -1,0 +1,197 @@
+main{
+    min-height: calc(100vh - 4rem);
+    /* min-height: 100vw; */
+    height: fit-content;
+    /* background-color: cornflowerblue; */
+}
+.one{
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.eror1{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    color: rgb(248, 165, 11);
+}
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+    animation: loading1 1.3s linear 0s infinite ;
+}
+@keyframes loading1 {
+    from{
+        transform: rotateZ(360deg);
+    }
+    to{
+        transform: rotateZ(0deg);
+    }
+    
+}
+
+/* Main Content to be Shown */
+body{
+    background-color: rgba(255, 255, 255, 0.274);
+}
+
+.mainContent{
+    display: flex;
+    margin: 0rem 2rem ;
+    margin-top: 5rem;
+    /* background-color: rgba(128, 128, 128, 0.411); */
+    /* justify-content: center; */
+    background-color: rgba(167, 160, 160, 0.37);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(0, 0, 0, 0.445);
+    border-radius: 10px;
+}
+.image{
+    flex: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.writing{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* background-color: rgba(128, 128, 128, 0.411); */
+}
+.heading{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    position: relative;
+    /* background-color: red; */
+}
+.heading h1{
+      font-family: 'Roboto', cursive;
+      font-size: 3rem;
+}
+.heading img{
+    margin: 0 2rem;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.heading img:hover{
+    transform: translateY(0.3rem);
+}
+.container{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+.fl:hover .todo{
+opacity: 1;
+pointer-events: all;
+}
+.todo{
+    background: gray;
+    color: white;
+    width: fit-content;
+    padding: 2px;
+    position: absolute;
+    bottom: -32px;
+    left: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+.card p{
+    margin: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#imb{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.desc{
+    margin-top: 3rem;
+    font-size: 2rem;
+    justify-self: center;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+.trailer a{
+    text-align: center;
+    display: flex;
+    width:12rem;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgb(88, 88, 236);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+   margin: auto;
+   margin-top: 5rem;
+}
+.trailer a p{
+    margin: 0 0.5rem;
+    font-weight: 600;
+}
+.trailer a:hover{
+    background-color: rgba(34, 34, 197, 0.774);
+}
+main h2{
+    margin: 2rem 5rem;
+    /* margin-top: 5rem; */
+    font-size: 2.7rem;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.774);
+    font-family: 'Roboto';
+}
+.comp{
+    background-color: rgba(167, 160, 160, 0.37);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(0, 0, 0, 0.445);
+    border-radius: 19px;
+    margin: 5rem;
+}
+.cast{
+    /* margin-top: 3rem; */
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+  
+}
+.left-cast,.right-cast{
+   flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 1.5rem;
+    font-family:'Roboto';
+}
+.cont{
+    margin: 2rem;
+    text-align: center;
+}
+.dark1{
+    font-weight: 900;
+ 
+}
+.cont p{
+    margin-top: 1rem;    
+}

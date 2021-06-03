@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(201, 221, 230);
+}
+main{
+    min-height: calc(100vh - 4rem);
+    /* min-height: 100vw; */
+    height: fit-content;
+    margin-bottom: 3rem;
+    /* background-color: cornflowerblue; */
+}
+main h1{
+    font-size: 3.5rem;
+    margin: 3rem 3rem 1rem 2rem;
+    color: rgba(0, 0, 0, 0.623);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main h3{
+    font-size: 3.5rem;
+    margin: 5rem 0;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.651);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main h2{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: rgba(15, 13, 13, 0.746);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.img{
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    margin-bottom: 2rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    margin: 2rem;
+    font-size: 1.2rem;
+}

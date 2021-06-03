@@ -1,0 +1,22 @@
+@media  screen and (max-width:579px) and (min-width:0px){
+   footer{
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+   }
+   .left-one,.right-one{
+       margin: 0;
+   }
+   .left-one a{
+       margin:0 0;
+   }
+   .log img{
+       display: none;
+   }
+   .right-one{
+       /* flex-direction: column; */
+       justify-content: center;
+       align-items: center;
+       margin: 0;
+   }
+}

@@ -1,0 +1,45 @@
+footer{
+   
+    display: flex;
+    background-color: black;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 4rem;
+    height: fit-content;
+    flex-wrap: wrap;
+}
+.left-one{
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+}
+.left-one a{
+    color: white;
+    text-decoration: none;
+    margin: 0 2rem;
+}
+.left-one a:hover{
+    color: rgba(189, 124, 233, 0.986);
+    
+}
+.right-one{
+    display: flex;
+    align-items: center;
+    
+}
+.right-one h1{
+    font-family: 'Roboto', cursive;
+    margin-right:  4rem;
+    font-size: 1.5rem;
+}
+.right-one p{
+    margin: 0 1rem;
+    font-size: 1.3rem;
+}
+.log{
+    display: flex;
+}
+.log img{
+    margin:0 1rem
+}

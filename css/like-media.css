@@ -1,0 +1,21 @@
+@media  screen and (max-width:387px) and (min-width:0px){
+   
+   html{
+       font-size: 50%;
+   }
+}
+@media  screen and (max-width:493px) and (min-width:0px){
+   
+  .card{
+      min-width: 0;
+  }
+}
+@media  screen and (max-width:295px) and (min-width:0px){
+   
+  .card{
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+  }
+}
