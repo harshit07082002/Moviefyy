@@ -1,4 +1,5 @@
 export const elements={
+    //assets
     search:document.querySelector('.search'),
     searchText:document.querySelector('#search'),
     search1:document.querySelector('.search1'),
