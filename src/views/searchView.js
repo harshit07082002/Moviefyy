@@ -1,4 +1,4 @@
-import { elements } from "./assets";
+import { elements } from './assets';
 
 export const data = () => {
   return elements.searchText.value;
@@ -7,29 +7,29 @@ export const data1 = () => {
   return elements.searchText1.value;
 };
 export const clearSearch = () => {
-  elements.searchText1.value = "";
+  elements.searchText1.value = '';
 };
 export const addLoader = () => {
   const string = ` <div class="loader">
     <img src="./img/loop.png" alt="loading">
 </div> `;
 
-  elements.loader.insertAdjacentHTML("afterbegin", string);
+  elements.loader.insertAdjacentHTML('afterbegin', string);
 };
 export const deleteLoader = () => {
-  elements.loader.innerHTML = "";
+  elements.loader.innerHTML = '';
 };
 export const printData = (data) => {
-  if (data.id !== "" && data.title !== "" && data.rating !== "") {
+  if (data.id !== '' && data.title !== '' && data.rating !== '') {
     let point = 0;
     if (data.cast.length > 0) {
       point++;
     }
-    if (data.length !== "") point++;
-    if (data.year != "") point++;
-    if (data.plot !== "") point++;
-    if (data.poster !== "") point++;
-    if (data.rating_votes !== "") point++;
+    if (data.length !== '') point++;
+    if (data.year != '') point++;
+    if (data.plot !== '') point++;
+    if (data.poster !== '') point++;
+    if (data.rating_votes !== '') point++;
     if (point > 2) printing(data);
     else {
       printError();
@@ -40,8 +40,8 @@ export const printData = (data) => {
 };
 
 export const clearPrevData = () => {
-  elements.addError.innerHTML = "";
-  elements.main.innerHTML = "";
+  elements.addError.innerHTML = '';
+  elements.main.innerHTML = '';
 };
 
 const printError = () => {
@@ -53,12 +53,12 @@ const printError = () => {
       <h1 >NO RESULT FOUND :(</h1>
   </div>
   </div> `;
-  elements.addError.insertAdjacentHTML("afterbegin", string);
+  elements.addError.insertAdjacentHTML('afterbegin', string);
 };
 
 const isLiked = (id) => {
   // if(localStorage.getItem("array"));
-  const data = JSON.parse(localStorage.getItem("array"));
+  const data = JSON.parse(localStorage.getItem('array'));
   if (data) {
     for (var i = 0; i < data.length; i++) {
       if (data[i].id === id) {
@@ -79,7 +79,7 @@ const printing = (data) => {
             <div class="heading">
               
           <img src="img/${
-            isLiked(data.id) ? "filled-heart" : "outline-heart"
+            isLiked(data.id) ? 'filled-heart' : 'outline-heart'
           }.png" alt="heart" height="40px" class="like">
             
             <h1>${data.title}</h1>
@@ -107,7 +107,7 @@ const printing = (data) => {
         
         <div class="trailer">
             <a href="${
-              data.trailer.link === "" ? "#" : data.trailer.link
+              data.trailer.link === '' ? '#' : data.trailer.link
             }" target="__parent"> <p>Watch Trailer</p> <img src="img/outline_play_arrow_white_24dp.png" alt="play"></a>
         </div>
         </div>
@@ -124,7 +124,7 @@ const printing = (data) => {
 </div>
  </div>
     `;
-  elements.main.insertAdjacentHTML("afterbegin", string);
+  elements.main.insertAdjacentHTML('afterbegin', string);
 };
 
 const leftCast = (data) => {
@@ -155,14 +155,14 @@ export const updateChanges = (data, target) => {
   if (isLiked(data.id)) {
     // remove element from array
 
-    const a = JSON.parse(localStorage.getItem("array"));
+    const a = JSON.parse(localStorage.getItem('array'));
 
     for (var i = 0; i < a.length; i++) {
       if (a[i].id == data.id) {
         a.splice(i, 1);
       }
     }
-    localStorage.setItem("array", JSON.stringify(a));
+    localStorage.setItem('array', JSON.stringify(a));
 
     // change img
 
@@ -176,10 +176,10 @@ export const updateChanges = (data, target) => {
       rating: data.rating,
       id: data.id,
     };
-    var a = JSON.parse(localStorage.getItem("array"));
+    var a = JSON.parse(localStorage.getItem('array'));
     a.push(obj);
     console.log(a);
-    localStorage.setItem("array", JSON.stringify(a));
+    localStorage.setItem('array', JSON.stringify(a));
 
     // change img
 
