@@ -6,9 +6,8 @@ export default class Search{
     }
     async getOutput(){
         try{
-        const r=await axios(`https://imdb-internet-movie-database-unofficial.p.rapidapi.com/film/${this.query}?rapidapi-key=f64e8eced0msh2ffde7db3d148d3p111465jsn6ec45388c77f
-        `);
-        this.result=r.data;
+            const r = await axios.request(`https://api.themoviedb.org/3/search/movie?api_key=ddec2244e29a6398525405b932d0479a&language=en-US&query=${this.query}&page=1&include_adult=true`)
+            this.result=r.data.results;
         }
         catch(error){
             alert(error);

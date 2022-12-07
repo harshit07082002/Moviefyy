@@ -47,7 +47,7 @@ elements.main.addEventListener('click',(e)=>{
     
     if(e.target.matches(".like"))
     {   
-        searchView.updateChanges(event.search.result,e.target);
+        searchView.updateChanges(event.search.result[0],e.target);
 
     }
 })

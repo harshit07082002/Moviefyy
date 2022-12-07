@@ -26,18 +26,20 @@ elements.likeMovies.addEventListener('click',(e)=>{
     if(e.target.matches(".cancel *"))
     {    const data=JSON.parse(localStorage.getItem("array"));
         const id=e.target.id;
+        console.log(id);
+        let data2=[];
         for(let i=0;i<data.length;i++)
         {
-            if(data[i].id===id)
+            if(data[i].id==id)
             {
-                data.splice(i,1);
-                break;
             }
+            else data2.push(data[i]);
         }
-        localStorage.setItem("array",JSON.stringify(data));
+        console.log(data2);
+        localStorage.setItem("array",JSON.stringify(data2));
         deleteData();
-        if(data.length>0)
-       printData(data);
+        if(data2.length>0)
+       printData(data2);
        else 
        printError();
     }
@@ -58,7 +60,15 @@ elements.likeMovies.addEventListener('click',(e)=>{
     if(e.target.matches(".card *")&& !e.target.matches(".cancel *"))
     {
         const id= e.target.id;
-        localStorage.setItem("like-redirect",id);
+        const data=JSON.parse(localStorage.getItem("array"));
+        let name;
+        data.forEach(element => {
+            if(element.id == id)
+            {
+                name=element.name;
+            }
+        });
+        localStorage.setItem("like-redirect",name);
         location.href="/search.html";
     }
 });
@@ -130,7 +140,7 @@ const cardsLeft=(data)=>{
     for(var i=0;i<data.length;i+=2){
     let string=`
    <div class="card" id="${data[i].id}">
-   <img src="${data[i].img}" height="200px" id="${data[i].id}" alt="Movie Image">
+   <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2${data[i].img}" height="200px" id="${data[i].id}" alt="Movie Image">
    <div class="heading" id="${data[i].id}">
        <h2 id="${data[i].id}">${checkTitle(data[i].name)}</h2>
        <div class="rating" id="${data[i].id}">
@@ -152,7 +162,7 @@ const cardRight=(data)=>{
     for(var i=1;i<data.length;i+=2){
     let string=`
     <div class="card" id="${data[i].id}">
-    <img src="${data[i].img}" height="200px" id="${data[i].id}" alt="Movie Image">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2${data[i].img}" height="200px" id="${data[i].id}" alt="Movie Image">
     <div class="heading" id="${data[i].id}">
         <h2 id="${data[i].id}">${checkTitle(data[i].name)}</h2>
         <div class="rating" id="${data[i].id}">
